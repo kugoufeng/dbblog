@@ -3,8 +3,8 @@
     <div class="site-content__wrapper">
       <div class="site-content">
         <div class="brand-info">
-          <h2 class="brand-info__text">db's Blog</h2>
-          <p class="brand-info__intro">这是一个努力成长中的小小程序猿 and 要永远相信美好的事情即将发生！</p>
+          <h2 class="brand-info__text"></h2>
+          <p class="brand-info__intro"></p>
         </div>
         <div class="login-main">
           <h3 class="login-title">管理员登录</h3>
@@ -106,7 +106,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(38, 50, 56, .6);
+    background-color: rgba(200, 200, 200, .2);
     overflow: hidden;
     &:before {
       position: fixed;

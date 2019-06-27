@@ -3,9 +3,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     druid:
-      url: jdbc:mysql://localhost:3306/dbblog?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-      username: root
-      password: 123456
+      url: jdbc:mysql://kugoufeng1:3306/dbblog?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: kugoufeng
+      password: fjtblt003
       initial-size: 10
       max-active: 100
       min-idle: 10
@@ -33,7 +33,7 @@ spring:
             multi-statement-allow: true
   # redis 配置
   redis:
-    host: localhost
+    host: kugoufeng1
     port: 6379
     timeout: 6s #连接池超时时长
     lettuce:
@@ -45,11 +45,11 @@ spring:
   # elasticsearch配置
   data:
     elasticsearch:
-      cluster-name: elasticsearch
-      cluster-nodes: 127.0.0.1:9300
+      cluster-name: docker-cluster
+      cluster-nodes: kugoufeng1:9300
   # rabbitMQ配置
   rabbitmq:
-    host: 127.0.0.1
+    host: kugoufeng1
     port: 5672
     username: guest
     password: guest
