@@ -1,19 +1,23 @@
 <template>
   <nav class="site-navbar" :class="'site-navbar--' + navbarLayoutType">
     <div class="site-navbar__header">
-      <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
-        <a class="site-navbar__brand-lg" href="javascript:;">db's Blog</a>
-        <a class="site-navbar__brand-mini" href="javascript:;">DB</a>
-      </h1>
+      <el-button
+        class="site-navbar__header1"
+        type="primary"
+        mode="horizontal"
+        @click="sidebarFold = !sidebarFold">
+          <template v-if="sidebarFold">
+            <icon-svg name="zhankai"></icon-svg>
+          </template>
+          <template v-else>
+            <icon-svg name="zhedie"></icon-svg>
+          </template>
+      </el-button>
     </div>
     <div class="site-navbar__body clearfix">
-      <el-menu
-        class="site-navbar__menu"
-        mode="horizontal">
-        <el-menu-item class="site-navbar__switch" index="0" @click="sidebarFold = !sidebarFold">
-          <icon-svg name="zhedie"></icon-svg>
-        </el-menu-item>
-      </el-menu>
+      <h1 class="site-navbar__menu site-navbar__brand" @click="$router.push({ name: 'home' })">
+        后台管理系统
+      </h1>
       <el-menu
         class="site-navbar__menu site-navbar__menu--right"
         mode="horizontal">

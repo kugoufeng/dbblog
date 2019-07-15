@@ -1,5 +1,5 @@
 <template>
-  <aside class="site-sidebar" :class="'site-sidebar--' + sidebarLayoutSkin">
+  <el-aside class="site-sidebar" :class="'site-sidebar--' + sidebarLayoutSkin">
     <div class="site-sidebar__inner">
       <el-menu
         :default-active="menuActiveName || 'home'"
@@ -18,7 +18,7 @@
         </sub-menu>
       </el-menu>
     </div>
-  </aside>
+  </el-aside>
 </template>
 
 <script>
@@ -27,7 +27,8 @@ import { isURL } from '@/utils/validate'
 export default {
   data () {
     return {
-      dynamicMenuRoutes: []
+      dynamicMenuRoutes: [],
+      isCollapse: true
     }
   },
   components: {
